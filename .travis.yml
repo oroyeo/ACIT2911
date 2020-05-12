@@ -1,0 +1,6 @@
+install: 
+  - "pip install selenium"
+languages: python
+python: 
+  - stable
+  - "3.7"
