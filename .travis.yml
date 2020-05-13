@@ -9,4 +9,4 @@ python:
   - "3.6"
   - "3.7"
 script: 
-  - ./test/selenium_test.py
+  - python ./test/selenium_test.py
