@@ -55,6 +55,7 @@ class TestWebsite(unittest.TestCase):
         img_3 = self.driver.find_element_by_id('fps-i3')
         img_4 = self.driver.find_element_by_id('fps-i4')
         click_button = self.driver.find_element_by_id('fps-click')
+        print(self.driver.current_url)
 
         # Clicks images and clicks the redirection button
         img_1.click()
