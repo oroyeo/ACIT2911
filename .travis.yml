@@ -4,6 +4,9 @@ before_install:
   - "google-chrome-stable --headless -disable-gpu --remote-debugging-port=9222 HTTP://localhost &"
 before_script:
  - "chmod +x ./test/selenium_test.py"
+ - "wget http://chromedriver.storage.googleapis.com/2.24/chromedriver_linux64.zip"
+ - "unzip chromedriver_linux64.zip -d /home/travis/virtualenv/python2.7.12/bin/"
+ - "export CHROME_BIN=chromium-browser"
 install: 
   - "pip install selenium"
 languages: python
