@@ -17,7 +17,7 @@ class TestWebsite(unittest.TestCase):
 
     def setUp(self) -> None:
         """Initializes a test"""
-        self.driver = webdriver.Chrome('/home/travis/virtualenv/python3.7.1/bin/')
+        self.driver = webdriver.Chrome('/home/travis/virtualenv/python3.7.1/bin/chromedriver')
         self.driver.get("http://game-aid.ca/wp/")
         self.driver.implicitly_wait(2) # Waits in seconds to find elements
         self.logPoint()
