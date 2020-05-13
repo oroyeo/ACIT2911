@@ -9,7 +9,7 @@ before_script:
   - "unzip chromedriver_linux64.zip -d /home/travis/virtualenv/python3.7.1/bin/"
   - "export CHROME_BIN=chromium-browser"
 install: 
-  - "pip install selenium"
+  - "pip3.7 install selenium"
 languages: python
 python: 
   - "3.7"
