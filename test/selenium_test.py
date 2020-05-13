@@ -105,9 +105,10 @@ class TestWebsite(unittest.TestCase):
 
         
         self.driver.find_element_by_id('login').click()
+        time.sleep(10)
         print(self.driver.current_url)
         
-        time.sleep(10)
+
         login_area = self.driver.find_element_by_id('username-257')
         password_area = self.driver.find_element_by_id('user_password-257')
         login_button = self.driver.find_element_by_id('um-submit-btn')
