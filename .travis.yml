@@ -10,8 +10,8 @@ before_script:
   - "unzip chromedriver_linux64.zip -d /home/travis/virtualenv/python3.7.1/bin/"
   - "export CHROME_BIN=chromium-browser"
 install: 
-  - "pip3.7 install selenium"
-  - "pip3.7 install pyvirtualdisplay"
+  - "pip install selenium"
+  - "pip install pyvirtualdisplay"
 languages: python
 python: 
   - "3.7"
