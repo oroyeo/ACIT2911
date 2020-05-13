@@ -12,6 +12,8 @@ before_script:
 install: 
   - "pip install selenium"
   - "pip install pyvirtualdisplay"
+after_install: 
+  - "python -c \"import selenium; print(selenium.__version__)\""
 languages: python
 python: 
   - "3.7"
