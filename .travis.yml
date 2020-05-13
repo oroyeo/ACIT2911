@@ -6,7 +6,7 @@ before_script:
  - "echo $PATH"
  - "chmod +x ./test/selenium_test.py"
  - "wget http://chromedriver.storage.googleapis.com/81.0.4044.69/chromedriver_linux64.zip"
- - "unzip chromedriver_linux64.zip -d /home/travis/virtualenv/python3.7.1/bin/"
+ - "sudo unzip chromedriver_linux64.zip -d /home/travis/virtualenv/python3.7.1/bin/"
  - "export CHROME_BIN=chromium-browser"
 install: 
   - "pip install selenium"
