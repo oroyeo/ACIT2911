@@ -7,4 +7,4 @@ python:
   - "3.6"
   - "3.7"
 script: 
-  - selenium_test.py
+  - selenium_test
