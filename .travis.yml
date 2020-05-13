@@ -1,5 +1,7 @@
 addons: 
   chrome: stable
+before_install: 
+  - "google-chrome-stable --headless -disable-gpu --remote-debugging-port=9222 HTTP://localhost &"
 before_script:
  - "chmod +x ./test/selenium_test.py"
 install: 
