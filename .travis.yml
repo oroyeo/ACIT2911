@@ -5,6 +5,7 @@ before_install:
 before_script: 
   - "echo $PATH"
 #  - "chmod +x ./test/selenium_test.py"
+  - "chmod +x ./test/test.py
   - "wget http://chromedriver.storage.googleapis.com/81.0.4044.69/chromedriver_linux64.zip"
   - "unzip chromedriver_linux64.zip -d /home/travis/virtualenv/python3.7.1/bin/"
   - "export CHROME_BIN=chromium-browser"
@@ -15,4 +16,4 @@ python:
   - "3.7"
  script: 
 #  - "python ./test/selenium_test.py"
- - test.py
+ - "pythn ./test/test.py"
