@@ -3,6 +3,10 @@ from selenium.webdriver.common.keys import Keys
 import unittest
 import inspect
 import time
+from pyvirtualdisplay import Display
+
+display = Display(visible=0, size=(800, 800))  
+display.start()
 
 # java -jar selenium-server-standalone-3.141.59.jar
 # CLI command to start the selenium server on port 4444
