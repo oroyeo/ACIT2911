@@ -105,7 +105,7 @@ class TestWebsite(unittest.TestCase):
 
         
         self.driver.find_element_by_link_text('Login').click()
-        time.sleep(20)
+        time.sleep(40)
         print(self.driver.current_url)
         
 
