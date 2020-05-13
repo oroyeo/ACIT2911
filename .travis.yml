@@ -16,4 +16,4 @@ python:
   - "3.7"
  script: 
 #  - "python ./test/selenium_test.py"
- - "pythn ./test/test.py"
+ - "python ./test/test.py"
