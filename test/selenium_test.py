@@ -191,7 +191,7 @@ class TestWebsite(unittest.TestCase):
 
         login_button.click()
 
-        logout_link = self.driver.find_element_by_id('login-button').click()  # Will need to fix this to say 'Logout'
+        logout_link = self.driver.find_element_by_id('login-button')  # Will need to fix this to say 'Logout'
         logout_link.click()
 
         logout_button = self.driver.find_element_by_xpath("//*[contains(text(), 'Logout')]")
