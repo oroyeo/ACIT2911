@@ -4,6 +4,7 @@ before_install:
   - "google-chrome-stable --headless -disable-gpu --no-sandbox"
 before_script: 
   - "echo $PATH"
+  - "chmod +w /home/travis/virtualenv/python3.7.1/bin/"
   - "chmod +x ./test/selenium_test.py"
   - "wget http://chromedriver.storage.googleapis.com/81.0.4044.69/chromedriver_linux64.zip"
   - "unzip chromedriver_linux64.zip -d /home/travis/virtualenv/python3.7.1/bin/"
