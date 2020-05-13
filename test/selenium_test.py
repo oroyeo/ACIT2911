@@ -99,29 +99,29 @@ class TestWebsite(unittest.TestCase):
         img_4.click()
         click_button.click()
 
-#     def test_login(self):
-#         """TP002-A Tests successful login"""
-#         print('Testing Successful Login')
+    def test_login(self):
+        """TP002-A Tests successful login"""
+        print('Testing Successful Login')
 
-#         #
-#         self.driver.find_element_by_link_text('Login').click()
+        
+        self.driver.find_element_by_id('login').click()
 
 
-#         login_area = self.driver.find_element_by_id('username-257')
-#         password_area = self.driver.find_element_by_id('user_password-257')
-#         login_button = self.driver.find_element_by_id('um-submit-btn')
+        login_area = self.driver.find_element_by_id('username-257')
+        password_area = self.driver.find_element_by_id('user_password-257')
+        login_button = self.driver.find_element_by_id('um-submit-btn')
 
-#         login_area.click()
-#         login_area.send_keys('test')
+        login_area.click()
+        login_area.send_keys('test')
 
-#         password_area.click()
-#         password_area.send_keys('Testing1')
+        password_area.click()
+        password_area.send_keys('Testing1')
 
-#         login_button.click()
+        login_button.click()
 
-#         current_url = self.driver.current_url
-#         self.assertEqual(current_url, 'http://game-aid.ca/wp/user/test/',
-#                          'Should return http://game-aid.ca/wp/user/test/')
+        current_url = self.driver.current_url
+        self.assertEqual(current_url, 'http://game-aid.ca/wp/user/test/',
+                         'Should return http://game-aid.ca/wp/user/test/')
 
 #     def test_login_false_username(self):
 #         """TP002-B Tests unsuccessful login with non-existent username"""
