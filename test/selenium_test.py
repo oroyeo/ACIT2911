@@ -105,7 +105,8 @@ class TestWebsite(unittest.TestCase):
 
         
         self.driver.find_element_by_id('login').click()
-
+        print(self.driver.current_url)
+        self.driver.implicity_wait(10)
 
         login_area = self.driver.find_element_by_id('username-257')
         password_area = self.driver.find_element_by_id('user_password-257')
