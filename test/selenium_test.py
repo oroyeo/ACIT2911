@@ -107,10 +107,7 @@ class TestWebsite(unittest.TestCase):
         
         self.driver.find_element_by_id('login-button').click()
         time.sleep(10)
-#         self.driver.get('http://game-aid.ca/wp/login/')
-        print(self.driver.current_url)
         
-
         login_area = self.driver.find_element_by_id('username-257')
         password_area = self.driver.find_element_by_id('user_password-257')
         login_button = self.driver.find_element_by_id('um-submit-btn')
