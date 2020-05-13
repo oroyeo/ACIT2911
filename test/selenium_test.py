@@ -104,7 +104,7 @@ class TestWebsite(unittest.TestCase):
         print('Testing Successful Login')
 
         
-        self.driver.find_element_by_link_text('Login').click()
+        self.driver.find_element_by_id('login').click()
         time.sleep(40)
         print(self.driver.current_url)
         
