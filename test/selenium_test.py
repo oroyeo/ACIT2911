@@ -99,108 +99,108 @@ class TestWebsite(unittest.TestCase):
         img_4.click()
         click_button.click()
 
-    def test_login(self):
-        """TP002-A Tests successful login"""
-        print('Testing Successful Login')
+#     def test_login(self):
+#         """TP002-A Tests successful login"""
+#         print('Testing Successful Login')
 
-        #
-        self.driver.find_element_by_link_text('Login').click()
+#         #
+#         self.driver.find_element_by_link_text('Login').click()
 
 
-        login_area = self.driver.find_element_by_id('username-257')
-        password_area = self.driver.find_element_by_id('user_password-257')
-        login_button = self.driver.find_element_by_id('um-submit-btn')
+#         login_area = self.driver.find_element_by_id('username-257')
+#         password_area = self.driver.find_element_by_id('user_password-257')
+#         login_button = self.driver.find_element_by_id('um-submit-btn')
 
-        login_area.click()
-        login_area.send_keys('test')
+#         login_area.click()
+#         login_area.send_keys('test')
 
-        password_area.click()
-        password_area.send_keys('Testing1')
+#         password_area.click()
+#         password_area.send_keys('Testing1')
 
-        login_button.click()
+#         login_button.click()
 
-        current_url = self.driver.current_url
-        self.assertEqual(current_url, 'http://game-aid.ca/wp/user/test/',
-                         'Should return http://game-aid.ca/wp/user/test/')
+#         current_url = self.driver.current_url
+#         self.assertEqual(current_url, 'http://game-aid.ca/wp/user/test/',
+#                          'Should return http://game-aid.ca/wp/user/test/')
 
-    def test_login_false_username(self):
-        """TP002-B Tests unsuccessful login with non-existent username"""
-        print('Testing Unsuccessful Login with non-existent username')
+#     def test_login_false_username(self):
+#         """TP002-B Tests unsuccessful login with non-existent username"""
+#         print('Testing Unsuccessful Login with non-existent username')
 
-        self.driver.find_element_by_link_text('Login').click()
+#         self.driver.find_element_by_link_text('Login').click()
 
-        login_area = self.driver.find_element_by_id('username-257')
-        password_area = self.driver.find_element_by_id('user_password-257')
-        login_button = self.driver.find_element_by_id('um-submit-btn')
+#         login_area = self.driver.find_element_by_id('username-257')
+#         password_area = self.driver.find_element_by_id('user_password-257')
+#         login_button = self.driver.find_element_by_id('um-submit-btn')
 
-        login_area.click()
-        login_area.send_keys('notarealuser')
+#         login_area.click()
+#         login_area.send_keys('notarealuser')
 
-        password_area.click()
-        password_area.send_keys('notarealpassword')
+#         password_area.click()
+#         password_area.send_keys('notarealpassword')
 
-        login_button.click()
+#         login_button.click()
 
-        unknown_user_error = self.driver.find_element_by_class_name('um-error-code-invalid_username').text
-        self.assertEqual(unknown_user_error, "Unknown username. Check again or try your email address.",
-                         'Should return "Unknown username. Check again or try your email address."')
+#         unknown_user_error = self.driver.find_element_by_class_name('um-error-code-invalid_username').text
+#         self.assertEqual(unknown_user_error, "Unknown username. Check again or try your email address.",
+#                          'Should return "Unknown username. Check again or try your email address."')
 
-    def test_login_false_password(self):
-        """TP002-C Tests unsuccessful login with non-existent username"""
-        print('Testing Unsuccessful Login with wrong password.')
+#     def test_login_false_password(self):
+#         """TP002-C Tests unsuccessful login with non-existent username"""
+#         print('Testing Unsuccessful Login with wrong password.')
 
-        # Navigates to login page
-        self.driver.find_element_by_link_text('Login').click()
+#         # Navigates to login page
+#         self.driver.find_element_by_link_text('Login').click()
 
-        # Sets login text fields to variables
-        login_area = self.driver.find_element_by_id('username-257')
-        password_area = self.driver.find_element_by_id('user_password-257')
-        login_button = self.driver.find_element_by_id('um-submit-btn')
+#         # Sets login text fields to variables
+#         login_area = self.driver.find_element_by_id('username-257')
+#         password_area = self.driver.find_element_by_id('user_password-257')
+#         login_button = self.driver.find_element_by_id('um-submit-btn')
 
-        # Enters login information
-        login_area.click()
-        login_area.send_keys('test')
-        password_area.click()
-        password_area.send_keys('notarealpassword')
-        login_button.click()
+#         # Enters login information
+#         login_area.click()
+#         login_area.send_keys('test')
+#         password_area.click()
+#         password_area.send_keys('notarealpassword')
+#         login_button.click()
 
-        # Checks for proper error message
-        unknown_pass_error = self.driver.find_element_by_class_name('um-field-error').text
-        self.assertEqual(unknown_pass_error, "Password is incorrect. Please try again.",
-                         'Should return "Password is incorrect. Please try again."')
+#         # Checks for proper error message
+#         unknown_pass_error = self.driver.find_element_by_class_name('um-field-error').text
+#         self.assertEqual(unknown_pass_error, "Password is incorrect. Please try again.",
+#                          'Should return "Password is incorrect. Please try again."')
 
-    def test_loguot(self):
-        """TP-003-A Tests successful logout"""
-        print('Testing Successful Logout')
+#     def test_loguot(self):
+#         """TP-003-A Tests successful logout"""
+#         print('Testing Successful Logout')
 
-        # Navigates to login page
-        self.driver.find_element_by_link_text('Login').click()
+#         # Navigates to login page
+#         self.driver.find_element_by_link_text('Login').click()
 
-        # Sets text fields as variables
-        login_area = self.driver.find_element_by_id('username-257')
-        password_area = self.driver.find_element_by_id('user_password-257')
-        login_button = self.driver.find_element_by_id('um-submit-btn')
+#         # Sets text fields as variables
+#         login_area = self.driver.find_element_by_id('username-257')
+#         password_area = self.driver.find_element_by_id('user_password-257')
+#         login_button = self.driver.find_element_by_id('um-submit-btn')
 
-        # Enters login information and enters
-        login_area.click()
-        login_area.send_keys('test')
+#         # Enters login information and enters
+#         login_area.click()
+#         login_area.send_keys('test')
 
-        password_area.click()
-        password_area.send_keys('Testing1')
+#         password_area.click()
+#         password_area.send_keys('Testing1')
 
-        login_button.click()
+#         login_button.click()
 
-        logout_link = self.driver.find_element_by_link_text('Login')  # Will need to fix this to say 'Logout'
-        logout_link.click()
-        print('this worked')
+#         logout_link = self.driver.find_element_by_link_text('Login')  # Will need to fix this to say 'Logout'
+#         logout_link.click()
+#         print('this worked')
 
-        logout_button = self.driver.find_element_by_xpath("//*[contains(text(), 'Logout')]")
+#         logout_button = self.driver.find_element_by_xpath("//*[contains(text(), 'Logout')]")
 
-        logout_button.click()
+#         logout_button.click()
 
-        current_url = self.driver.current_url
-        self.assertEqual(current_url, 'http://game-aid.ca/wp/login/',
-                         'Should return http://game-aid.ca/wp/login/')
+#         current_url = self.driver.current_url
+#         self.assertEqual(current_url, 'http://game-aid.ca/wp/login/',
+#                          'Should return http://game-aid.ca/wp/login/')
 
     def test_profile(self):
         """TP-004-A Tests profile page for a coach"""
@@ -231,84 +231,84 @@ class TestWebsite(unittest.TestCase):
         self.assertTrue(coach_stats.is_displayed())
         self.assertTrue(coach_img.is_displayed())
 
-    def test_register_pass(self):
-        """TP-005-A Tests a successful registration attempt
+#     def test_register_pass(self):
+#         """TP-005-A Tests a successful registration attempt
 
-            Originally planned to implement this, however since it uses a live database and
-            no access to it, we cannot mock it without making an actual account
-        """
-        pass
+#             Originally planned to implement this, however since it uses a live database and
+#             no access to it, we cannot mock it without making an actual account
+#         """
+#         pass
 
-    def test_register_user_fail(self):
-        """TP-005-B Tests an unsuccessful username registration attempt"""
-        print('Testing Unsuccessful Registration [USERNAME]')
+#     def test_register_user_fail(self):
+#         """TP-005-B Tests an unsuccessful username registration attempt"""
+#         print('Testing Unsuccessful Registration [USERNAME]')
 
-        # Navigates to registration form
-        self.driver.find_element_by_link_text('Login').click()
-        self.driver.find_element_by_class_name('um-alt').click()
+#         # Navigates to registration form
+#         self.driver.find_element_by_link_text('Login').click()
+#         self.driver.find_element_by_class_name('um-alt').click()
 
-        # Enters registration information
-        self.driver.find_element_by_id('user_login-256').send_keys('')
-        self.driver.find_element_by_id('first_name-256').send_keys('roger')
-        self.driver.find_element_by_id('last_name-256').send_keys('rabbit')
-        self.driver.find_element_by_id('user_email-256').send_keys('mangosentinel@hotmail.com')
-        self.driver.find_element_by_id('user_password-256').send_keys('Thisismypassword1')
-        self.driver.find_element_by_id('confirm_user_password-256').send_keys('Thisismypassword1')
-        self.driver.find_element_by_id('um-submit-btn').click()
+#         # Enters registration information
+#         self.driver.find_element_by_id('user_login-256').send_keys('')
+#         self.driver.find_element_by_id('first_name-256').send_keys('roger')
+#         self.driver.find_element_by_id('last_name-256').send_keys('rabbit')
+#         self.driver.find_element_by_id('user_email-256').send_keys('mangosentinel@hotmail.com')
+#         self.driver.find_element_by_id('user_password-256').send_keys('Thisismypassword1')
+#         self.driver.find_element_by_id('confirm_user_password-256').send_keys('Thisismypassword1')
+#         self.driver.find_element_by_id('um-submit-btn').click()
 
-        # Asserts if the right error message is produced
-        username_error = self.driver.find_element_by_xpath('//*[contains(concat( " ", @class, " " ),'
-                                                           ' concat( " ", "um-field-error", " " ))]').text
-        self.assertEqual(username_error, "Username is required",
-                         'Should say "Username is required"')
+#         # Asserts if the right error message is produced
+#         username_error = self.driver.find_element_by_xpath('//*[contains(concat( " ", @class, " " ),'
+#                                                            ' concat( " ", "um-field-error", " " ))]').text
+#         self.assertEqual(username_error, "Username is required",
+#                          'Should say "Username is required"')
 
-    def test_register_email_fail(self):
-        """TP-005-C Tests an unsuccessful email registration attempt"""
-        print('Testing Unsuccessful Registration [EMAIL]')
+#     def test_register_email_fail(self):
+#         """TP-005-C Tests an unsuccessful email registration attempt"""
+#         print('Testing Unsuccessful Registration [EMAIL]')
 
-        # Navigates to registration form
-        self.driver.find_element_by_link_text('Login').click()
-        self.driver.find_element_by_class_name('um-alt').click()
+#         # Navigates to registration form
+#         self.driver.find_element_by_link_text('Login').click()
+#         self.driver.find_element_by_class_name('um-alt').click()
 
-        # Enters registration information
-        self.driver.find_element_by_id('user_login-256').send_keys('rogerrabbit')
-        self.driver.find_element_by_id('first_name-256').send_keys('roger')
-        self.driver.find_element_by_id('last_name-256').send_keys('rabbit')
-        self.driver.find_element_by_id('user_email-256').send_keys('mangosentinel')
-        self.driver.find_element_by_id('user_password-256').send_keys('Thisismypassword1')
-        self.driver.find_element_by_id('confirm_user_password-256').send_keys('Thisismypassword1')
-        self.driver.find_element_by_id('um-submit-btn').click()
+#         # Enters registration information
+#         self.driver.find_element_by_id('user_login-256').send_keys('rogerrabbit')
+#         self.driver.find_element_by_id('first_name-256').send_keys('roger')
+#         self.driver.find_element_by_id('last_name-256').send_keys('rabbit')
+#         self.driver.find_element_by_id('user_email-256').send_keys('mangosentinel')
+#         self.driver.find_element_by_id('user_password-256').send_keys('Thisismypassword1')
+#         self.driver.find_element_by_id('confirm_user_password-256').send_keys('Thisismypassword1')
+#         self.driver.find_element_by_id('um-submit-btn').click()
 
-        # Asserts if the right error message is produced
-        email_error = self.driver.find_element_by_xpath('//*[contains(concat( " ", @class, " " ), '
-                                                        'concat( " ", "um-field-error", " " ))]').text
-        self.assertEqual(email_error, "This is not a valid email",
-                         'Should say "This is not a valid email"')
+#         # Asserts if the right error message is produced
+#         email_error = self.driver.find_element_by_xpath('//*[contains(concat( " ", @class, " " ), '
+#                                                         'concat( " ", "um-field-error", " " ))]').text
+#         self.assertEqual(email_error, "This is not a valid email",
+#                          'Should say "This is not a valid email"')
 
-    def test_register_password_fail(self):
-        """TP-005-B Tests an unsuccessful registration attempt"""
-        print('Testing Unsuccessful Registration [PASSWORD]')
+#     def test_register_password_fail(self):
+#         """TP-005-B Tests an unsuccessful registration attempt"""
+#         print('Testing Unsuccessful Registration [PASSWORD]')
 
-        # Navigates to register page
-        self.driver.find_element_by_link_text('Login').click()
-        self.driver.find_element_by_class_name('um-alt').click()
+#         # Navigates to register page
+#         self.driver.find_element_by_link_text('Login').click()
+#         self.driver.find_element_by_class_name('um-alt').click()
 
-        # Enters user information and clicks
-        self.driver.find_element_by_id('user_login-256').send_keys('rogerrabbit')
-        self.driver.find_element_by_id('first_name-256').send_keys('roger')
-        self.driver.find_element_by_id('last_name-256').send_keys('rabbit')
-        self.driver.find_element_by_id('user_email-256').send_keys('mangosentinel@hotmail.com')
-        self.driver.find_element_by_id('user_password-256').send_keys('thisismypassword')
-        self.driver.find_element_by_id('confirm_user_password-256').send_keys('thisismypassword')
-        self.driver.find_element_by_id('um-submit-btn').click()
+#         # Enters user information and clicks
+#         self.driver.find_element_by_id('user_login-256').send_keys('rogerrabbit')
+#         self.driver.find_element_by_id('first_name-256').send_keys('roger')
+#         self.driver.find_element_by_id('last_name-256').send_keys('rabbit')
+#         self.driver.find_element_by_id('user_email-256').send_keys('mangosentinel@hotmail.com')
+#         self.driver.find_element_by_id('user_password-256').send_keys('thisismypassword')
+#         self.driver.find_element_by_id('confirm_user_password-256').send_keys('thisismypassword')
+#         self.driver.find_element_by_id('um-submit-btn').click()
 
-        # Asserts if element equals the proper text
-        password_error = self.driver.find_element_by_xpath('//*[contains(concat( " ", @class, " " ), '
-                                                           'concat( " ", "um-field-error", " " ))]').text
-        self.assertEqual(password_error, "Your password must contain at least one lowercase letter, "
-                                         "one capital letter and one number",
-                         'Should say "Your password must contain at least one lowercase letter,'
-                         ' one capital letter and one number"')
+#         # Asserts if element equals the proper text
+#         password_error = self.driver.find_element_by_xpath('//*[contains(concat( " ", @class, " " ), '
+#                                                            'concat( " ", "um-field-error", " " ))]').text
+#         self.assertEqual(password_error, "Your password must contain at least one lowercase letter, "
+#                                          "one capital letter and one number",
+#                          'Should say "Your password must contain at least one lowercase letter,'
+#                          ' one capital letter and one number"')
 
     def test_footer(self):
         """TP-006-A Tests the footer"""
